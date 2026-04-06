@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitologias - navi</title>
+  <link rel="icon" type="imgs/logo" href="imgs/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page mitologias-page">
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="imgs/logo.png" alt="logo"/>
+      <span class="nav-brand">Portfolio - Navi</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#models">3D Models</a></li>
+      <li><a href="index.html#clients">Clients</a></li>
+    </ul>
+  </nav>
+
+  <div class="project-detail-hero">
+    <div class="project-hero-layout">
+      <div class="project-hero-content">
+        <a href="index.html#models" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to projects
+        </a>
+
+        <div class="detail-meta">
+          <span class="project-tag">Event</span>
+          <span class="project-year">2025</span>
+        </div>
+
+        <h1 class="detail-title">Mitologias</h1>
+        <p class="detail-subtitle">Minecraft RPG Series</p>
+        <p class="detail-desc">
+          Custom 3D models designed for the Minecraft series Mitologias, a 30-day RPG adventure with themed props, decorative assets and environment details built in Blockbench to fit the fantasy tone of the project.
+        </p>
+
+        <div class="detail-stats-row">
+          <div class="detail-stat">
+            <label>Tool</label>
+            <span>Blockbench</span>
+          </div>
+          <div class="detail-stat">
+            <label>Type</label>
+            <span>Event</span>
+          </div>
+          <div class="detail-stat">
+            <label>Year</label>
+            <span>2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-hero-logo">
+        <img src="imgs/logo_mitologias.png" alt="Mitologias logo" />
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-gallery detail-gallery-natural">
+    <p class="gallery-label">Gallery</p>
+    <div class="gallery-carousel" data-gallery-carousel>
+      <button class="project-carousel-nav project-carousel-prev" type="button" aria-label="Ver imagen anterior" data-gallery-prev>
+        <span aria-hidden="true">&#8249;</span>
+      </button>
+      <div class="gallery-carousel-viewport" data-gallery-viewport>
+        <div class="gallery-grid gallery-carousel-track" data-gallery-track>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_1.png')">
+            <img src="imgs/mitologias_1.png" alt="Mitologias 1" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_2.png')">
+            <img src="imgs/mitologias_2.png" alt="Mitologias 2" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_3.png')">
+            <img src="imgs/mitologias_3.png" alt="Mitologias 3" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_4.png')">
+            <img src="imgs/mitologias_4.png" alt="Mitologias 4" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_5.png')">
+            <img src="imgs/mitologias_5.png" alt="Mitologias 5" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_6.png')">
+            <img src="imgs/mitologias_6.png" alt="Mitologias 6" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_7.png')">
+            <img src="imgs/mitologias_7.png" alt="Mitologias 7" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_8.png')">
+            <img src="imgs/mitologias_8.png" alt="Mitologias 8" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_9.png')">
+            <img src="imgs/mitologias_9.png" alt="Mitologias 9" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_10.png')">
+            <img src="imgs/mitologias_10.png" alt="Mitologias 10" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_11.png')">
+            <img src="imgs/mitologias_11.png" alt="Mitologias 11" />
+          </div>
+          <div class="gallery-item" onclick="openLightbox('imgs/mitologias_12.png')">
+            <img src="imgs/mitologias_12.png" alt="Mitologias 12" />
+          </div>
+        </div>
+      </div>
+      <button class="project-carousel-nav project-carousel-next" type="button" aria-label="Ver imagen siguiente" data-gallery-next>
+        <span aria-hidden="true">&#8250;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" onclick="handleLightboxBackdrop(event)">
+    <div class="lightbox-toolbar">
+      <button class="lightbox-zoom" id="lightbox-zoom-out" type="button" aria-label="Alejar imagen" onclick="zoomOut(event)">-</button>
+      <button class="lightbox-zoom" id="lightbox-zoom-in" type="button" aria-label="Acercar imagen" onclick="zoomIn(event)">+</button>
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen" onclick="closeLightbox(event)">X</button>
+    </div>
+    <div class="lightbox-stage">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxStage = lightbox.querySelector('.lightbox-stage');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const zoomInButton = document.getElementById('lightbox-zoom-in');
+    const zoomOutButton = document.getElementById('lightbox-zoom-out');
+    const galleryCarousel = document.querySelector('[data-gallery-carousel]');
+    const galleryViewport = document.querySelector('[data-gallery-viewport]');
+    const galleryTrack = document.querySelector('[data-gallery-track]');
+    const galleryPrevButton = document.querySelector('[data-gallery-prev]');
+    const galleryNextButton = document.querySelector('[data-gallery-next]');
+    const MIN_ZOOM = 1;
+    const MAX_ZOOM = 4;
+    const ZOOM_STEP = 0.25;
+    let currentZoom = MIN_ZOOM;
+    let translateX = 0;
+    let translateY = 0;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragOriginX = 0;
+    let dragOriginY = 0;
+    let galleryAutoOffset = 0;
+    let galleryAutoAnimationId = null;
+    let galleryAutoResumeTimer = null;
+    let galleryAutoLastTime = 0;
+
+    function getGalleryMetrics() {
+      if (!galleryViewport || !galleryTrack) {
+        return null;
+      }
+
+      const galleryItems = Array.from(galleryTrack.querySelectorAll('.gallery-item'));
+      if (!galleryItems.length) {
+        return null;
+      }
+
+      const firstItem = galleryItems[0];
+      const rows = Math.max(1, parseInt(galleryCarousel?.dataset.galleryRows || '1', 10));
+      const gap = parseFloat(window.getComputedStyle(galleryTrack).gap) || 0;
+      const itemWidth = firstItem.getBoundingClientRect().width;
+      const visibleColumns = Math.max(1, Math.round((galleryViewport.clientWidth + gap) / (itemWidth + gap)));
+      const totalColumns = Math.max(1, Math.ceil(galleryItems.length / rows));
+      const maxIndex = Math.max(0, totalColumns - visibleColumns);
+
+      return {
+        gap,
+        itemWidth,
+        rows,
+        visibleColumns,
+        maxIndex,
+        stepWidth: itemWidth + gap
+      };
+    }
+
+    function updateGalleryNav() {
+      const metrics = getGalleryMetrics();
+      if (!metrics || !galleryTrack || !galleryPrevButton || !galleryNextButton) {
+        return;
+      }
+
+      galleryTrack.style.transform = `translate3d(-${galleryAutoOffset}px, 0, 0)`;
+      galleryPrevButton.disabled = false;
+      galleryNextButton.disabled = false;
+      galleryCarousel.classList.remove('is-at-start', 'is-at-end');
+    }
+
+    function stopGalleryAutoPlay() {
+      if (galleryAutoAnimationId) {
+        cancelAnimationFrame(galleryAutoAnimationId);
+        galleryAutoAnimationId = null;
+      }
+    }
+
+    function normalizeGalleryLoop() {
+      const metrics = getGalleryMetrics();
+      if (!metrics || !galleryTrack) {
+        return;
+      }
+
+      while (galleryAutoOffset >= metrics.stepWidth) {
+        galleryTrack.appendChild(galleryTrack.firstElementChild);
+        galleryAutoOffset -= metrics.stepWidth;
+      }
+
+      while (galleryAutoOffset < 0) {
+        galleryTrack.insertBefore(galleryTrack.lastElementChild, galleryTrack.firstElementChild);
+        galleryAutoOffset += metrics.stepWidth;
+      }
+    }
+
+    function stepGalleryAutoPlay(timestamp) {
+      if (!galleryTrack || document.hidden) {
+        galleryAutoAnimationId = requestAnimationFrame(stepGalleryAutoPlay);
+        return;
+      }
+
+      if (!galleryAutoLastTime) {
+        galleryAutoLastTime = timestamp;
+      }
+
+      const delta = timestamp - galleryAutoLastTime;
+      galleryAutoLastTime = timestamp;
+      galleryAutoOffset += (delta / 1000) * 26;
+      normalizeGalleryLoop();
+      updateGalleryNav();
+      galleryAutoAnimationId = requestAnimationFrame(stepGalleryAutoPlay);
+    }
+
+    function startGalleryAutoPlay() {
+      stopGalleryAutoPlay();
+
+      if (!galleryCarousel || !galleryTrack) {
+        return;
+      }
+
+      const metrics = getGalleryMetrics();
+      if (!metrics || metrics.maxIndex <= 0) {
+        return;
+      }
+
+      galleryAutoLastTime = 0;
+      galleryAutoAnimationId = requestAnimationFrame(stepGalleryAutoPlay);
+    }
+
+    function scheduleGalleryAutoPlay(delay = 2200) {
+      if (galleryAutoResumeTimer) {
+        clearTimeout(galleryAutoResumeTimer);
+      }
+
+      galleryAutoResumeTimer = window.setTimeout(() => {
+        startGalleryAutoPlay();
+      }, delay);
+    }
+
+    function nudgeGallery(direction) {
+      const metrics = getGalleryMetrics();
+      if (!metrics || !galleryTrack) {
+        return;
+      }
+
+      galleryAutoOffset += direction * metrics.stepWidth;
+      normalizeGalleryLoop();
+      updateGalleryNav();
+    }
+
+    if (galleryPrevButton && galleryNextButton) {
+      galleryPrevButton.addEventListener('click', () => {
+        stopGalleryAutoPlay();
+        nudgeGallery(-1);
+        scheduleGalleryAutoPlay();
+      });
+      galleryNextButton.addEventListener('click', () => {
+        stopGalleryAutoPlay();
+        nudgeGallery(1);
+        scheduleGalleryAutoPlay();
+      });
+      galleryTrack.addEventListener('transitionend', () => {
+        galleryCarousel.classList.remove('is-animating');
+      });
+      galleryCarousel.addEventListener('mouseenter', stopGalleryAutoPlay);
+      galleryCarousel.addEventListener('mouseleave', () => scheduleGalleryAutoPlay(900));
+      galleryCarousel.addEventListener('focusin', stopGalleryAutoPlay);
+      galleryCarousel.addEventListener('focusout', () => scheduleGalleryAutoPlay(900));
+      galleryCarousel.addEventListener('touchstart', stopGalleryAutoPlay, { passive: true });
+      galleryCarousel.addEventListener('pointerdown', stopGalleryAutoPlay);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopGalleryAutoPlay();
+        } else {
+          scheduleGalleryAutoPlay(1200);
+        }
+      });
+      window.addEventListener('resize', () => {
+        galleryAutoOffset = 0;
+        updateGalleryNav();
+        scheduleGalleryAutoPlay(1200);
+      });
+      updateGalleryNav();
+      startGalleryAutoPlay();
+    }
+
+    function getDragBounds() {
+      const stageRect = lightboxStage.getBoundingClientRect();
+      const naturalWidth = lightboxImg.naturalWidth || stageRect.width;
+      const naturalHeight = lightboxImg.naturalHeight || stageRect.height;
+      const baseScale = Math.min(stageRect.width / naturalWidth, stageRect.height / naturalHeight);
+      const fittedWidth = naturalWidth * baseScale;
+      const fittedHeight = naturalHeight * baseScale;
+
+      return {
+        maxX: Math.max(0, ((fittedWidth * currentZoom) - stageRect.width) / 2),
+        maxY: Math.max(0, ((fittedHeight * currentZoom) - stageRect.height) / 2)
+      };
+    }
+
+    function clampTranslations() {
+      const { maxX, maxY } = getDragBounds();
+      translateX = Math.min(maxX, Math.max(-maxX, translateX));
+      translateY = Math.min(maxY, Math.max(-maxY, translateY));
+    }
+
+    function updateLightboxZoom() {
+      if (currentZoom <= MIN_ZOOM) {
+        translateX = 0;
+        translateY = 0;
+      } else {
+        clampTranslations();
+      }
+
+      lightboxImg.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${currentZoom})`;
+      zoomOutButton.disabled = currentZoom <= MIN_ZOOM;
+      zoomInButton.disabled = currentZoom >= MAX_ZOOM;
+      lightbox.classList.toggle('is-zoomed', currentZoom > MIN_ZOOM);
+    }
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      currentZoom = MIN_ZOOM;
+      translateX = 0;
+      translateY = 0;
+      updateLightboxZoom();
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      if (event) event.stopPropagation();
+      lightbox.classList.remove('open');
+      lightbox.classList.remove('is-dragging');
+      lightbox.classList.remove('is-zoomed');
+      lightboxImg.src = '';
+      currentZoom = MIN_ZOOM;
+      translateX = 0;
+      translateY = 0;
+      isDragging = false;
+      updateLightboxZoom();
+      document.body.style.overflow = '';
+    }
+
+    function handleLightboxBackdrop(event) {
+      if (event.target === lightbox || event.target.classList.contains('lightbox-stage')) {
+        closeLightbox();
+      }
+    }
+
+    function zoomIn(event) {
+      event.stopPropagation();
+      currentZoom = Math.min(MAX_ZOOM, +(currentZoom + ZOOM_STEP).toFixed(2));
+      updateLightboxZoom();
+    }
+
+    function zoomOut(event) {
+      event.stopPropagation();
+      currentZoom = Math.max(MIN_ZOOM, +(currentZoom - ZOOM_STEP).toFixed(2));
+      updateLightboxZoom();
+    }
+
+    function handleLightboxWheel(event) {
+      if (!lightbox.classList.contains('open')) return;
+      event.preventDefault();
+
+      if (event.deltaY < 0) {
+        currentZoom = Math.min(MAX_ZOOM, +(currentZoom + ZOOM_STEP).toFixed(2));
+      } else {
+        currentZoom = Math.max(MIN_ZOOM, +(currentZoom - ZOOM_STEP).toFixed(2));
+      }
+
+      updateLightboxZoom();
+    }
+
+    function startDrag(event) {
+      if (currentZoom <= MIN_ZOOM) return;
+      isDragging = true;
+      dragStartX = event.clientX;
+      dragStartY = event.clientY;
+      dragOriginX = translateX;
+      dragOriginY = translateY;
+      lightbox.classList.add('is-dragging');
+      lightboxImg.style.transition = 'none';
+      event.preventDefault();
+    }
+
+    function dragImage(event) {
+      if (!isDragging) return;
+      translateX = dragOriginX + (event.clientX - dragStartX);
+      translateY = dragOriginY + (event.clientY - dragStartY);
+      clampTranslations();
+      lightboxImg.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${currentZoom})`;
+    }
+
+    function stopDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      lightbox.classList.remove('is-dragging');
+      lightboxImg.style.transition = 'transform 0.22s ease';
+    }
+
+    lightboxImg.addEventListener('load', updateLightboxZoom);
+    lightboxStage.addEventListener('mousedown', startDrag);
+    lightboxStage.addEventListener('wheel', handleLightboxWheel, { passive: false });
+    window.addEventListener('mousemove', dragImage);
+    window.addEventListener('mouseup', stopDrag);
+    window.addEventListener('resize', updateLightboxZoom);
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+      if (!lightbox.classList.contains('open')) return;
+      if (event.key === '+' || event.key === '=' || event.key === 'NumpadAdd') zoomIn(event);
+      if (event.key === '-' || event.key === '_' || event.key === 'NumpadSubtract') zoomOut(event);
+    });
+  </script>
+</body>
+</html>
